@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# Hotel Booking Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web-based hotel booking system designed to allow users to search, book, and manage hotel rooms, and enable hotel management to view, update, and manage bookings. The system provides an easy interface for both users and hotel admins.
 
-## Available Scripts
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Features](#features)
+4. [Folder Structure](#folder-structure)
+5. [Technologies Used](#technologies-used)
+6. [Contributing](#contributing)
+7. [License](#license)
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+To get started with the project, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
+   git clone https://github.com/yourusername/Hotel-Booking-Management-System.git
+2. Navigate to the project directory:
+   cd Hotel-Booking-Management-System
+3. Install the backend dependencies:
+   cd api
+   yarn install
+4. Install the frontend dependencies:
+   cd client
+   yarn install
+5. Set up your environment variables (refer to env.md for necessary keys and settings).
+6. Start the development server for both the backend and frontend:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  For the backend:
+  cd api
+  yarn start
 
-### `npm test`
+  For the frontend:
+  cd client
+  yarn start
+  
+The application will now be running on http://localhost:3000 (or the port you configure in the .env file for both the frontend and backend).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+The system allows users to search and book rooms, view their booking history, and manage their personal details. For hotel admins, it enables them to view and manage all bookings, as well as update hotel room availability.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Endpoints
+```
+POST /api/bookings: Book a room.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+GET /api/bookings: View all bookings (admin only).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+POST /api/auth/login: Login for users and admins.
 
-### `npm run eject`
+GET /api/rooms: View available rooms.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+POST /api/rooms: Add new rooms (admin only).
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Features
+```
+User Registration & Login: Users can create an account and log in to the system.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Room Booking: Users can book available rooms in the hotel.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Booking Management: Admins can view and manage all bookings.
 
-## Learn More
+Hotel Room Management: Admins can add, edit, or remove rooms from the hotel.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Responsive UI: Accessible and responsive design for all users, including admins.
+```
+## Folder Structure
+```
+Hotel-Booking-Management-System/
+├── api/                   # Backend API code
+│   ├── controllers/       # Business logic for API routes
+│   ├── models/            # Database models
+│   ├── routes/            # API route definitions
+│   ├── utils/             # Utility functions
+│   ├── index.js           # Main entry point for the backend server
+│   ├── package.json       # Backend dependencies
+│   └── yarn.lock          # Yarn lockfile for backend dependencies
+├── client/                # Frontend application
+│   ├── README.md          # Frontend documentation
+│   ├── package.json       # Frontend dependencies
+│   ├── yarn.lock          # Yarn lockfile for frontend dependencies
+│   ├── public/            # Static assets like images, fonts, etc.
+│   └── src/               # React components, state management, etc.
+└── env.md                 # Environment variable setup guide
+```
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Backend: Node.js, Express
+2. Frontend: React
+3. Database: MongoDB 
+4. Authentication: JWT
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+We welcome contributions to improve the Hotel Booking Management System. Please fork the repository, create a new branch, and submit a pull request.
 
-### Analyzing the Bundle Size
+1. Fork the repo.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
+This project is licensed under the MIT License.
 
-### Making a Progressive Web App
+### Key Adjustments:
+```
+- Replace `"yourusername"` with your GitHub username.
+- Ensure that your backend and frontend are properly set up based on the structure and dependencies you have.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You can now copy and paste this directly into your `README.md` file. Let me know if you need further adjustments!
+```
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

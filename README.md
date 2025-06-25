@@ -18,16 +18,20 @@ To get started with the project, follow these steps:
 1. Clone the repository:
    git clone https://github.com/yourusername/Hotel-Booking-Management-System.git
 2. Navigate to the project directory:
-   cd Hotel-Booking-Management-System
+```
+cd Hotel-Booking-Management-System
+```
 3. Install the backend dependencies:
+```
    cd api
    yarn install
+```
 4. Install the frontend dependencies:
    cd client
    yarn install
 5. Set up your environment variables (refer to env.md for necessary keys and settings).
 6. Start the development server for both the backend and frontend:
-
+```
   For the backend:
   cd api
   yarn start
@@ -35,6 +39,7 @@ To get started with the project, follow these steps:
   For the frontend:
   cd client
   yarn start
+```
   
 The application will now be running on http://localhost:3000 (or the port you configure in the .env file for both the frontend and backend).
 
@@ -56,16 +61,12 @@ POST /api/rooms: Add new rooms (admin only).
 ```
 
 ## Features
-```
-User Registration & Login: Users can create an account and log in to the system.
 
-Room Booking: Users can book available rooms in the hotel.
-
-Booking Management: Admins can view and manage all bookings.
-
-Hotel Room Management: Admins can add, edit, or remove rooms from the hotel.
-
-Responsive UI: Accessible and responsive design for all users, including admins.
+1. User Registration & Login: Users can create an account and log in to the system.
+2. Room Booking: Users can book available rooms in the hotel.
+3. Booking Management: Admins can view and manage all bookings.
+4. Hotel Room Management: Admins can add, edit, or remove rooms from the hotel.
+5. Responsive UI: Accessible and responsive design for all users, including admins.
 ```
 ## Folder Structure
 ```

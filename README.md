@@ -67,7 +67,7 @@ POST /api/rooms: Add new rooms (admin only).
 3. Booking Management: Admins can view and manage all bookings.
 4. Hotel Room Management: Admins can add, edit, or remove rooms from the hotel.
 5. Responsive UI: Accessible and responsive design for all users, including admins.
-```
+
 ## Folder Structure
 ```
 Hotel-Booking-Management-System/

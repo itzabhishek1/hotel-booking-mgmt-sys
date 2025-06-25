@@ -37,7 +37,8 @@ cd Hotel-Booking-Management-System
   cd api
   yarn start
 ```
-         For the frontend:
+
+   For the frontend:
 ```
   cd client
   yarn start

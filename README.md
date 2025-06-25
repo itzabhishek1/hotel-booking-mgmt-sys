@@ -31,12 +31,13 @@ cd Hotel-Booking-Management-System
    yarn install
 5. Set up your environment variables (refer to env.md for necessary keys and settings).
 6. Start the development server for both the backend and frontend:
+   For the backend:
 ```
-  For the backend:
   cd api
   yarn start
-
-  For the frontend:
+```
+   For the frontend:
+```
   cd client
   yarn start
 ```
